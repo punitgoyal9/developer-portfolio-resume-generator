@@ -1,0 +1,316 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f2f5;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.app-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* EDITOR PANEL STYLES */
+.editor-panel {
+  width: 45%;
+  background: #ffffff;
+  padding: 24px;
+  overflow-y: auto;
+  border-right: 2px solid #e5e7eb;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.editor-panel h2 {
+  color: #111827;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+.form-section {
+  background: #f9fafb;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.form-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #374151;
+}
+
+.form-group {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.inline-group {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #4b5563;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 8px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.btn {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #ffffff;
+  width: 100%;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+  color: #374151;
+}
+
+.btn-secondary:hover {
+  background-color: #d1d5db;
+}
+
+.btn-danger {
+  background-color: #ef4444;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 0.8rem;
+  margin-top: 6px;
+}
+
+.exp-item, .proj-item, .edu-item {
+  border: 1px dashed #cbd5e1;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background: #ffffff;
+}
+
+/* PREVIEW PANEL CONTAINER */
+.preview-panel {
+  width: 55%;
+  padding: 30px;
+  background: #525659;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* BASE RESUME CARD */
+.preview-card {
+  width: 100%;
+  max-width: 750px;
+  height: fit-content;
+  min-height: auto;
+  padding: 40px 45px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.preview-header {
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.preview-header h1 {
+  font-size: 2.2rem;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+.contact-info {
+  font-size: 0.95rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.summary-text {
+  font-size: 0.95rem;
+  line-height: 1.35;
+  text-align: justify;
+}
+
+.preview-section h2 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding-bottom: 2px;
+  margin-bottom: 6px;
+}
+
+.skills-lines {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.exp-preview-item, .proj-preview-item, .edu-preview-item {
+  margin-bottom: 10px;
+}
+
+.exp-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.exp-preview-item h4, .proj-preview-item h4, .edu-preview-item h4 {
+  font-size: 0.98rem;
+  font-weight: bold;
+}
+
+.exp-preview-item .exp-duration, .proj-preview-item .proj-tech, .edu-preview-item .edu-duration {
+  font-size: 0.92rem;
+  font-style: italic;
+}
+
+.exp-bullets, .proj-bullets, .edu-bullets {
+  margin-top: 3px;
+  padding-left: 18px;
+}
+
+.exp-bullets li, .proj-bullets li, .edu-bullets li {
+  font-size: 0.92rem;
+  line-height: 1.35;
+  margin-bottom: 2px;
+}
+
+/* ================= THEMES ================= */
+
+/* 1. CLASSIC SERIF THEME (Image Layout) */
+.preview-card.theme-classic {
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.preview-card.theme-classic h1,
+.preview-card.theme-classic h2,
+.preview-card.theme-classic h4,
+.preview-card.theme-classic p,
+.preview-card.theme-classic span,
+.preview-card.theme-classic li {
+  color: #000000;
+}
+
+.preview-card.theme-classic .preview-section h2 {
+  border-bottom: 1px solid #000000;
+}
+
+.preview-card.theme-classic .contact-info .sep {
+  color: #666666;
+}
+
+/* 2. MODERN TEAL THEME */
+.preview-card.theme-modern {
+  background: #ffffff;
+  color: #1f2937;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.preview-card.theme-modern h1 {
+  color: #0d9488;
+  font-weight: 700;
+}
+
+.preview-card.theme-modern .preview-section h2 {
+  color: #0d9488;
+  border-bottom: 2px solid #0d9488;
+}
+
+.preview-card.theme-modern h4 {
+  color: #111827;
+}
+
+.preview-card.theme-modern .contact-info,
+.preview-card.theme-modern .contact-info .sep {
+  color: #4b5563;
+}
+
+/* 3. MINIMAL DARK THEME */
+.preview-card.theme-dark {
+  background: #0f172a;
+  color: #f8fafc;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.preview-card.theme-dark h1 {
+  color: #38bdf8;
+  font-weight: 700;
+}
+
+.preview-card.theme-dark h2 {
+  color: #38bdf8;
+  border-bottom: 2px solid #38bdf8;
+}
+
+.preview-card.theme-dark h4,
+.preview-card.theme-dark p,
+.preview-card.theme-dark li,
+.preview-card.theme-dark span {
+  color: #e2e8f0;
+}
+
+.preview-card.theme-dark .contact-info,
+.preview-card.theme-dark .contact-info .sep {
+  color: #94a3b8;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 900px) {
+  .app-container {
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+  .editor-panel, .preview-panel {
+    width: 100%;
+  }
+}
